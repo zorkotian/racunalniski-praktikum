@@ -5,6 +5,8 @@
 \usepackage{lmodern}
 
 \usepackage{url}
+\usepackage{amsmath}
+\usepackage{amsthm}
 
 % Nastavimo koliko prostora izpustimo pod napisom nad sliko ali tabelo.
 \setlength{\belowcaptionskip}{2mm}
@@ -13,7 +15,13 @@
 
 % Kjer v besedilu naletite na niz `!!`, ga nadomestite z matematičnim izrazom
 % iz datoteke `magic-resitev.pdf`.
+{\theoremstyle{definition}
+\newtheorem{definicija}{Definicija}
+}
 
+{\theoremstyle{plain}
+\newtheorem{izrek}{Izrek}
+}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Prvi sklop nalog
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -43,6 +51,7 @@ Prirejeno po:
 % 3. naloga
 % Na tem mestu uporabite ukaz, ki izpiše kazalo vsebine.
 % Poiščite ga na spletu: po angleško se kazalu vsebine reče "table of contents".
+\tableofcontents
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Konec prvega sklopa nalog
@@ -53,12 +62,12 @@ Prirejeno po:
 
 \section{Uvod}
 
-% \begin{definicija}
+\begin{definicija}
    \emph{Magični kvadrat} reda \(n\) je nabor \(n^2\) različnih števil,
    ki so razvrščena v kvadratno tabelo tako, da vedno dobimo enako vsoto,
    če seštejemo vsa števila poljubne vrstice, vsa števila poljubnega
    stolpca ali vsa števila v katerikoli od glavnih diagonal.
-% \end{definicija}
+\end{definicija}
 
 Primer magičnega kvadrata reda 3 je prikazan v tabeli ??. % sklic: table:mag3
 
@@ -70,13 +79,13 @@ Primer magičnega kvadrata reda 3 je prikazan v tabeli ??. % sklic: table:mag3
 %   4 & 9 & 2 \\\hline
 % Konec magičnega kvadrata
 
-% \begin{definicija}
+ \begin{definicija}
    Magični kvadrat reda \(n\) je \emph{normalen}, če v njem nastopajo števila
    \begin{equation}
       % oznaka: eq:numbers
       1, 2, 3, \ldots, n^2-1, n^2.
    \end{equation}
-% \end{definicija}
+\end{definicija}
 
 Magični kvadrat v tabeli ?? je normalen.
 To je tudi najmanjši netrivialen normalen magični kvadrat.
@@ -147,28 +156,35 @@ in zato kvadrat ni normalen.
 
 \section{Osnovne lastnosti}
 
-% \begin{definicija}
+\begin{definicija}
       Vsoto ene vrstice, enega stolpca ali ene od glavnih diagonal
       v magičnem kvadratu imenujemo \emph{magična konstanta}.
-% \end{definicija}
+\end{definicija}
 
 % Začetek okolja izrek
-   Magična konstanta normalnega magičnega kvadrata reda !!
-   je enaka
-   \begin{equation}
-      % oznaka: eq:mc
-      % Okolje `equation` je že prikazni matematični način,
-      % zato tu izraz vpišite brez `\[` in `\]`.
-      !!
-   \end{equation}
+
+   
+   \begin{izrek}
+      Magična konstanta normalnega magičnega kvadrata reda !!
+      je enaka
+      \begin{equation}
+         % oznaka: eq:mc
+         % Okolje `equation` je že prikazni matematični način,
+         % zato tu izraz vpišite brez `\[` in `\]`.
+         !!
+      \end{equation}
+   \end{izrek}
 % Konec okolja izrek
 
 % Začetek dokaza
-   V normalnem magičnem kvadratu reda \(n\) je vsota vseh nastopajočih
-   števil (glej ?? na strani ??) enaka
-   !!. Ker imamo
-   v kvadratu \(n\) vrstic z enako vsoto, je vsota števil v eni vrstici
-   enaka številu \(M_2(n)\). % sklica: eq:numbers, eq:numbers
+   
+   \begin{proof}
+      V normalnem magičnem kvadratu reda \(n\) je vsota vseh nastopajočih
+      števil (glej ?? na strani ??) enaka
+      !!. Ker imamo
+      v kvadratu \(n\) vrstic z enako vsoto, je vsota števil v eni vrstici
+      enaka številu \(M_2(n)\).
+   \end{proof} % sklica: eq:numbers, eq:numbers
 % Konec dokaza
 
 Preprost račun pokaže, da je konstanti ?? analogna konstanta
@@ -176,16 +192,16 @@ Preprost račun pokaže, da je konstanti ?? analogna konstanta
 \(A\), \(A+D\), \(A+2D\), \ldots, \(A+(n^2-1)D\), enaka % sklic: eq:mc
 !!
 
-% \begin{definicija}
+\begin{definicija}
       Če vsako od števil v normalnem magičnem kvadratu reda \(n\) odštejemo
       od števila !!, dobimo nov magični kvadrat, ki je prvotnemu
       \emph{komplementaren}.
-% \end{definicija}
+\end{definicija}
 
-% \begin{definicija}
+\begin{definicija}
       Pravimo, da sta dva magična kvadrata \emph{različna}, če enega ni mogoče dobiti
       iz drugega s pomočjo zasukov oziroma zrcaljenj.
-% \end{definicija}
+\end{definicija}
 
 Števila različnih normalnih magičnih kvadratov se nahajajo v tabeli ??.
 % sklic: table:stevila

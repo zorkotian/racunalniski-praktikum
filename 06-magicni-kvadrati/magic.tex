@@ -7,6 +7,7 @@
 \usepackage{url}
 \usepackage{amsmath}
 \usepackage{amsthm}
+\usepackage{coffeestains}
 
 % Nastavimo koliko prostora izpustimo pod napisom nad sliko ali tabelo.
 \setlength{\belowcaptionskip}{2mm}
@@ -61,7 +62,6 @@ Prirejeno po:
 \newpage
 
 \section{Uvod}
-
 \begin{definicija}
    \emph{Magični kvadrat} reda \(n\) je nabor \(n^2\) različnih števil,
    ki so razvrščena v kvadratno tabelo tako, da vedno dobimo enako vsoto,
@@ -92,7 +92,6 @@ To je tudi najmanjši netrivialen normalen magični kvadrat.
 Poleg normalnih magičnih kvadratov so zanimivi tudi magični kvadrati praštevil. % sklic: table:mag3
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \section{Zgodovina}
 
 \subsection{Kvadrat ">Lo Shu"<}
@@ -106,7 +105,6 @@ da je bila vsota števil v katerikoli vrstici, kateremkoli stolpcu in na obeh
 glavnih diagonalah enaka: 15. To število je tudi enako številu dni v 24 ciklih
 kitajskega sončnega leta. Ta vzorec so na določen način uporabljali upravljalci
 reke.
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Kulturna pomembnost}
@@ -121,7 +119,7 @@ obliki magičnega kvadrata reda 3. Ta je v bistvu enak kot kvadrat
 Lo Shu, vendar je vsako število povečano za 19.
 
 Z magičnimi kvadrati so se ukvarjali tudi najbolj znani matematiki kot na
-primer Euler, glej ???. % ključ: euler
+primer Euler, glej \cite{euler}. % ključ: euler
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -217,11 +215,11 @@ Preprost račun pokaže, da je konstanti ?? analogna konstanta
 % Konec tabele
 
 Vse normalne magične kvadrate reda 4 je oštevilčil Frénicle de Bessy
-leta 1693, glej ???, in jih je moč najti v knjigi ???
+leta 1693, glej \cite{bessy}, in jih je moč najti v knjigi \cite{berlekamp}
 iz leta 1982. Število normalnih kvadratov reda 5 je izračunal
-R. Schroeppel leta 1973 (glej Gardner ???).
+R. Schroeppel leta 1973 (glej Gardner \cite{gardner}).
 Natančno število vseh različnih normalnih magičnih kvadratov reda 6 ni znano.
-Avtorja navedenega približka sta Pinn in Wieczerkowski (glej ???), ki
+Avtorja navedenega približka sta Pinn in Wieczerkowski (glej \cite{pinn}), ki
 sta za oceno uporabila simulacijo Monte Carlo in metode statistične mehanike.
  % ključi: bessy, berlekamp, gardner, pinn
 
@@ -230,7 +228,8 @@ sta za oceno uporabila simulacijo Monte Carlo in metode statistične mehanike.
 \newpage
 
 % Tu vstavite bibliografijo
-
+\bibliographystyle{siam}
+\bibliography{magic}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \end{document}

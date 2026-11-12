@@ -1,9 +1,16 @@
+# VSCode uporabniške nastavitve
+.vscode/
+
+# LaTeX
 *.aux
 *.bbl
 *.blg
 *.fdb_latexmk
 *.toc
 *.fls
+*.idx
+*.ilg
+*.ind
 *.log
 *.nav
 *.out
@@ -11,3 +18,13 @@
 *.pyc
 *.snm
 *.synctex.gz
+
+# MacOS
+__MACOSX
+.DS_Store
+
+# Windows
+thumbs.db
+
+# Python
+__pycache__

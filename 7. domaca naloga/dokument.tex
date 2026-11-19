@@ -1,8 +1,9 @@
 \documentclass[11pt]{article}
 \usepackage[a4paper, margin=2.5cm]{geometry}
 \usepackage[slovene]{babel}
-\usepackage{amsmath}
+\usepackage{amsmath, amssymb}
 \usepackage{amsthm}
+\usepackage{graphicx}
 \begin{document}
 
 {\theoremstyle{plain}
@@ -12,25 +13,31 @@
 \newtheorem{definicija}{Definicija}
 }
 
-
-
 \title{Brownovo gibanje} 
 \author{Matej Rojec}
+\maketitle
 
-Brownovo gibanje (več v ??) je intuitivno slučajen proces, % Sklic na knjigo
+Brownovo gibanje (več v \cite{karatzas1991brownian}) je intuitivno slučajen proces, % Sklic na knjigo
 ki predstavlja naključno gibanje delcev v mediju.
     
     % Slika: PerrinPlot2.pdf, velikost scale=0.3
     % Napis pod sliko: 
     % Reprodukcija slike iz Jean Baptiste Perrin, \emph{Mouvement brownien et réalité moléculaire}, Ann. de Chimie et de Physique (VIII) 18, 5-114, 1909
+    \begin{figure}[htbp]
+        \centering
+        \includegraphics[scale=0.3]{PerrinPlot2.pdf}
+        \caption{Reprodukcija slike iz Jean Baptiste Perrin, \emph{Mouvement brownien et réalité moléculaire}, Ann. de Chimie et de Physique (VIII) 18, 5-114, 1909}
+    \end{figure}
 
     % Začetek definicije
     \begin{definicija}
     Standardno Brownovo gibanje \(\{B_t\}_{t \geq 0}\) je slučajen proces z naslednjimi lastnostmi: 
-        \(B_0 = 0\).
-        Prirastki \(B_{t_n} - B_{t_{n-1}}, B_{t_{n-1}} - B_{t_{n-2}}, \ldots, B_2 - B_1, B_1 - B_0\) so neodvisne slučajne spremenljivke, za vsak \(t_0 \leq t_1 \leq \cdots \leq t_{n-1} \leq t_n\).
-        Za vsak \(t \geq 0\) in \(h > 0\) velja \(B_{t+h} - B_t \sim \mathcal{N}(0, h)\).
-        Funkcija \(t \mapsto B_t\) je zvezna skoraj gotovo.
+    \begin{enumerate}
+        \item \(B_0 = 0\).
+        \item Prirastki \(B_{t_n} - B_{t_{n-1}}, B_{t_{n-1}} - B_{t_{n-2}}, \ldots, B_2 - B_1, B_1 - B_0\) so neodvisne slučajne spremenljivke, za vsak \(t_0 \leq t_1 \leq \cdots \leq t_{n-1} \leq t_n\).
+        \item Za vsak \(t \geq 0\) in \(h > 0\) velja \(B_{t+h} - B_t \sim \mathcal{N}(0, h)\).
+        \item Funkcija \(t \mapsto B_t\) je zvezna skoraj gotovo.
+    \end{enumerate}
     \end{definicija}
     % Konec definicije
     
@@ -38,23 +45,29 @@ ki predstavlja naključno gibanje delcev v mediju.
     
     % Začetek definicije
     \begin{definicija}
-    Slučajna spremenljivka \(\tau\) na verjetnostnem prostoru !! z vrednostmi v !!
-    je čas ustavljanja glede na filtracijo !!, če velja: !!.
+    Slučajna spremenljivka \(\tau\) na verjetnostnem prostoru \((\Omega, \mathcal{F}, \mathbb{P})\) z vrednostmi v \([0, \infty]\)
+    je čas ustavljanja glede na filtracijo \(\{\mathcal{F}_t\}_{t \geq 0}\), če velja: 
+    \[
+    \{\tau \leq t\} \in \mathcal{F}_t \quad \text{za vsak } t \geq 0.
+    \]
     \end{definicija}
     % Konec definicije
     
-    Zdaj lahko zapišemo izrek ??. % Sklic na izrek z oznako thm:stopped_brownian
+    Zdaj lahko zapišemo izrek \ref{thm:stopped_brownian}. % Sklic na izrek z oznako thm:stopped_brownian
     
     % Začetek izreka
-    \begin{izrek}
-    Naj bo \(\{B_t\}_{t \geq 0}\) (standardno) Brownovo gibanje, !! čas ustavljanja glede na 
-    !! in naj velja !!.
+    \begin{izrek}\label{thm:stopped_brownian}
+    Naj bo \(\{B_t\}_{t \geq 0}\) (standardno) Brownovo gibanje, \(\tau\) čas ustavljanja glede na 
+    \(\{\mathcal{F}_t\}_{t \geq 0}\) in naj velja \(\mathbb{P}(\tau < \infty) = 1\).
     Potem je tudi proces:
     \[
     \hat{B} := \{B_{\tau+t} - B_\tau \mid t \geq 0\}
     \]
-    (standardno) Brownovo gibanje in neodvisen od !!.
+    (standardno) Brownovo gibanje in neodvisen od \(\mathcal{F}_\tau\).
     \end{izrek}
     % Konec izreka
+
+\bibliographystyle{plain}
+\bibliography{literatura} % Zamenjaj z imenom tvoje .bib datoteke (brez .bib)
     
 \end{document}

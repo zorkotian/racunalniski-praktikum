@@ -1,0 +1,166 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[slovene]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+\usepackage{amsmath,amsfonts}
+
+\setlength{\parindent}{0mm}
+
+\begin{document}
+
+% Datoteko dopolnite tako, da bo PDF čim bolj podoben datoteki
+% matematicni-izrazi-resitev.pdf.
+% Kjer piše ??, manjka matematični izraz.
+% Matematičnih nalog ne rešujte, samo zapišite matematične izraze.
+
+\section*{Logika in množice}
+
+\begin{enumerate}
+\item
+Poišči preneksno obliko formule \(\exists x : P(x) \wedge \forall x : Q(x) \Rightarrow \forall x : R(x)\).
+
+\item
+Definiramo množici \(A = [2, 5]\) in \(B = \{0, 1, 2, 3, 4, \dots\}\).
+V ravnino nariši:
+\begin{enumerate}
+\item \(A \cap B \times \emptyset\)
+\item \((A \cup B)^c \times \mathbb{R}\)
+\end{enumerate}
+
+\item
+Dokaži:
+\begin{itemize}
+\item \((A \Rightarrow B) \sim (\neg B \Rightarrow \neg A)\)
+\item \(\neg(A \vee B) \sim \neg A \wedge \neg B\)
+\end{itemize}
+\end{enumerate}
+
+\section*{Analiza}
+
+\begin{enumerate}
+\item
+Pokaži, da je funkcija \(x \mapsto \sqrt{x}\) enakomerno zvezna na \([0, \infty)\).
+
+\item
+Katero krivuljo določa naslednji parametrični zapis?
+% Pomagajte si z dokumentacijo o razmikih v matematičnem načinu:
+% https://www.overleaf.com/learn/latex/Spacing_in_math_mode
+\[x(t) = a \cos t, \qquad \% tu manjka ukaz za presledek y(t) = b \sin t, \qquad \% tu manjka ukaz za presledek t \in [0, 2 \pi]\]
+
+\item
+Pokaži, da ima \(f(x) = 3x + \sin(2x)\) inverzno funkcijo in izračunaj \((f^{-1})'(3\pi)\).
+
+\item
+Izračunaj integral
+% V rešitvi je integral zapisan v vrstičnem načinu, a v prikaznem slogu.
+% To dosežete tako, da v matematičnem načinu najprej uporabite ukaz displaystyle.
+% Pred dx je presledek: pravi ukaz je \,
+\(\displaystyle \int \frac{2+\sqrt{x+1}}{(x+1)^2-\sqrt{x+1}} \, dx\)
+% \frac{2+\sqrt{x+1}}{(x+1)^2-\sqrt{x+1}}
+
+\item
+Naj bo \(g\) zvezna funkcija. Ali posplošeni integral
+\[\int_0^1 \frac{g(x)}{x^2} \, dx\]
+konvergira ali divergira? Utemelji.
+
+\item
+S Taylorjevo formulo pokaži, da v okolici točke \(0\) velja
+\[\sin x = x - \frac{x^3}{3!} + \mathcal{O}(x^5).\]
+\end{enumerate}
+
+\section*{Kompleksna števila}
+
+\begin{enumerate}
+\item
+Naj bo \(z\) kompleksno število, \(z \ne 1\) in \(\vert{}z\vert{} = 1\).
+Dokaži, da je število \(i \, \frac{z+1}{z-1}\) realno.
+
+\item
+Poenostavi izraz:
+% V rešitvi so notranji ulomki zapisani z ukazom dfrac.
+\[\frac{\dfrac{3+i}{2-2i} + \dfrac{7i}{1-i}}{1 + \dfrac{i-1}{4} - \dfrac{5}{2-3i}}[cite: 2]\]
+\end{enumerate}
+
+\section*{Zaporedja, vrste in limite}
+
+\begin{enumerate}
+\item
+Z indukcijo dokaži, da za vsako naravno število \(n\) velja
+\[\sum_{i=1}^n i^2 = \frac{n(n+1)(2n+1)}{6}.[cite: 2]\]
+
+\item
+Naj bo \(\sum_{n=1}^\infty a_n\) absolutno konvergentna vrsta in \(a_n \ne -1\)[cite: 2].
+Dokaži, da je tudi vrsta \(\sum_{n=1}^\infty \frac{a_n}{1+a_n}\)
+absolutno konvergentna.
+
+\item
+Izračunaj limito
+\[\lim_{x \to \infty} \left(\sin\sqrt{x+1} - \sin\sqrt{x}\right).[cite: 2]\]
+
+\item
+Za dani zaporedji preveri, ali sta konvergentni.
+% Pomagajte si s spodnjima delno pripravljenima matematičnima izrazoma:
+% a_n = \sqrt{2+\sqrt{2+\dots+\sqrt{2}}} \qquad
+% b_n = \sin(\sin(\dots(\sin 1)\dots))
+% Zaviti oklepaj pod izrazom naredi ukaz underbrace: \underbrace{izraz}_{napis}.
+% Besedilo v napisu napišite z ukazom text, presledek pred njim pa z znakom ~.
+\[a_n = \underbrace{\sqrt{2+\sqrt{2+\dots+\sqrt{2}}}}_{n~\text{korenov}} \qquad b_n = \underbrace{\sin(\sin(\dots(\sin 1)\dots))}_{n~\text{sinusov}}[cite: 2]\]
+\end{enumerate}
+
+\section*{Algebra}
+
+\begin{enumerate}
+\item
+Vektorja \(\vec{c} = \vec{a} + 2\vec{b}\) in \(\vec{d} = \vec{a} - \vec{b}\)[cite: 2]
+sta pravokotna in imata dolžino 1. Določi kot med vektorjema \(\vec{a}\) in \(\vec{b}\).
+
+\item
+Izračunaj
+\[\begin{pmatrix} 1 & 2 & 3 & 4 & 5 & 6 \\ 4 & 5 & 2 & 6 & 3 & 1 \end{pmatrix}^{-2000}[cite: 2]\]
+% 1 2 3 4 5 6
+% 4 5 2 6 3 1
+\end{enumerate}
+
+\section*{Velika determinanta}
+
+Izračunaj naslednjo determinanto \(2n \times 2n\), ki ima na neoznačenih mestih ničle.
+% Prazna mesta v determinanti dobite tako, da med znakoma & ne napišete ničesar.
+% Pike naredijo ukazi cdots (vodoravne), vdots (navpične) in ddots (poševne).
+\[\begin{vmatrix} 1 & & & & & & 1 \\ & 2 & & & & 2 & \\ & & \ddots & & \ddots & & \\ & & & n-1 & n-1 & & \\ 1 & 2 & \cdots & n-1 & n & n+1 & n+2 & \cdots & 2n \\ & & & n+1 & n+1 & & \\ & & \ddots & & \ddots & & \\ & 2n & & & & 2n & \end{vmatrix}[cite: 3]\]
+% 1  1
+% 2  2
+%
+% n-1  n-1
+% 1  2  n-1  n  n+1  n+2  2n
+% n+1  n+1
+% n+2  n+2
+%
+% 2n  2n
+
+\section*{Grupe}
+
+Naj bo
+% Definiciji množic G in H sta v rešitvi poravnani pri enačaju, z okoljem align*.
+% Zavita oklepaja napišete kot \{ in \}, presledek za podpičjem pa z ukazom \;
+\begin{align*}
+G &= \{z \in \mathbb{C}; \; z = 2^k(\cos(m\pi\sqrt{2}) + i\sin(m\pi\sqrt{2})), \; k, m \in \mathbb{Z}\}[cite: 3] \\
+H &= \{(x, y) \in \mathbb{R}^2; \; x, y \in \mathbb{Z}\}[cite: 3]
+\end{align*}
+\begin{enumerate}
+\item
+Pokaži, da je \(G\) podgrupa v grupi \((\mathbb{C} \setminus \{0\}, \cdot)\)[cite: 3]
+neničelnih kompleksnih števil za običajno množenje.
+
+\item
+Pokaži, da je \(H\) podgrupa v aditivni grupi \((\mathbb{R}^2, +)\)[cite: 3]
+ravninskih vektorjev za običajno seštevanje po komponentah.
+
+\item
+Pokaži, da je preslikava \(f:H\to G\), podana s pravilom
+\[(x, y) \mapsto 2^x(\cos(y\pi\sqrt{2}) + i\sin(y\pi\sqrt{2}))[cite: 3]\]
+izomorfizem grup \(G\) in \(H\).
+\end{enumerate}
+
+\end{document}

@@ -3,14 +3,16 @@
 	% Naloga 2.3.1:
 	% Dodajte ukaze, ki bodo poskrbeli, da se bo prosojnica odkrivala postopoma,
 	% tako kot v datoteki prosojnice-resitev.pdf
-
 	Za prosojnice je značilna uporaba okolja \texttt{frame},
 	s katerim definiramo posamezno prosojnico,
 	%
+	\pause
 	postopno odkrivanje prosojnic,
 	%
+	\pause
 	ter nekateri drugi ukazi, ki jih najdemo v paketu \texttt{beamer}.
 	%
+	\pause
 	\begin{exampleblock}{Primer}
 		Verjetno ste že opazili, da za naslovno prosojnico niste uporabili
 		ukaza \texttt{maketitle}, ampak ukaz \texttt{titlepage}.
@@ -20,13 +22,15 @@
 \begin{frame}{Poudarjeni bloki}
 	% Naloga 2.3.2:
 	% Oblikujte poudarjena bloka z opombo in opozorilom.
-
+	\begin{block}{Opomba}
 		Okolja za poudarjene bloke so \texttt{block}, \texttt{exampleblock} in \texttt{alertblock}.
+	\end{block}
 
+	\begin{alertblock}{Opozorilo}
 		Začetek poudarjenega bloka (ukaz \texttt{begin}) vedno sprejme 
 		dva argumenta: okolje in naslov bloka.
-		Drugi argument (za naslov) je lahko prazen. 
-
+		Drugi argument (za naslov) je lahko prazen.
+	\end{alertblock}
 \end{frame}
 
 \begin{frame}{Tudi v predstavitvah lahko pišemo izreke in dokaze}
@@ -42,12 +46,12 @@
 	   Denimo, da je praštevil končno mnogo.
 		% Z neobveznim argumentom [<+->] okolja itemize določimo,
 		% da se elementi naštevanja odkrivajo postopoma.
-	   \begin{itemize}
-		  \item Naj bo \(p\) \alert{največje} praštevilo.
+	   \begin{itemize}[<+->]
+		  \item Naj bo \(p\) \alert<4>{največje} praštevilo.
 		  \item Naj bo \(q\) produkt števil \(1\), \(2\), \ldots, \(p\).
 		  \item Število \(q+1\) ni deljivo z nobenim praštevilom, torej je \(q+1\) praštevilo.
 		  \item To je protislovje, saj je \(q+1>p\). \qedhere
 	   \end{itemize}
 	\end{proof}
- \end{frame}
+\end{frame}
  
